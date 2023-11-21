@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@700&display=swap');
+*{padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+:root{
+    /* 3colors */
+    --color1:#9A3907;
+    --color2:black;
+    /* 3colors */
+    --color3:#561E0B;
+    --color4:#913311;
+    --color5:#2B0203;
+    /* 3colors */
+    --color6:#C1550D;
+    --color7:#651107;
+    --color8:#DA640D;
+    /* 2colors */
+    --color9:#B03F18;
+    --color10:#FB9B12;
+    --color11:#150101;
+    /* brian-color */
+    --color12:#F9E085;
+    --nav:#131921;
+}
+body{
+    height:auto;
+    width: 100vw;
+    background: linear-gradient(10deg,var(--color2),var(--color1),var(--color10));
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+nav{
+    width: 100%;
+    height: 11vh;
+    background: transparent;
+    box-shadow: 15px 20px 40px 10px  rgba(0, 0, 0, 0.2);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:20px;
+}
+.menu ul{
+    display: flex;
+    font-size: 1.2rem;
+    flex-direction: row-reverse;
+    list-style-type:none;
+}
+.menu ul li{
+    margin:0 1.5rem;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition:all 0.5s ease;
+}
+.logo2{
+    visibility: hidden;
+}
+a::before{
+    content:"";
+    height:10px;
+    width: 10px;
+    position:absolute;
+    border-radius:50%;
+    background-color: white;
+    top:35px;
+    opacity:0;
+    transition:all 0.5s ease;
+}
+.menu li:hover a::before{
+    opacity:1;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* logo */
+.logo a{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo a span{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.logo .logo-icon{
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
+}
+/* search */
+.search{
+    width:600px;
+    margin: 0 2rem;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search input{
+    width: 100%;
+    height: 100%;
+    font-size:1.5rem;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;   
+    box-shadow: 15px 20px 40px 10px  rgba(0, 0, 0, 0.2);
+}
+.div-icon-search{
+    width:30px ;
+    height: 95%;
+    position:absolute;
+    left:5px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.search .icon-search{
+    font-size: 2rem;
+}
+/* menu2 */
+.menu2{
+    display:flex;
+    list-style-type: none;
+    font-size: 1.4rem;
+}
+.menu2 li{
+    margin:0 1rem;
+}
+.menu2 li a{
+   color: black;
+   text-decoration: none;
+}
+.login span{
+    position:absolute;
+    top:25px;
+    opacity:0;
+    transition:all 0.5s ease;
+    font-size:1rem;
+    
+}
+.login a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.login a:hover span{
+    opacity:1;
+}
+.login-icon{
+font-size: 2rem;
+}
+/* toggle */
+.toggle-search{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.toggle-search .search-cancel *{
+position: absolute;
+font-size: 1.6rem;
+cursor: pointer;
+color: white;
+}
+.search-cancel{
+    width: 40px;
+    height: 40px;
+    visibility: visible;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle-search .search-cancel .toggle-icon-cancel{
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.4s ease;
+}
+.toggle-search .search-cancel.active .toggle-icon-search{
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.4s ease;
+}
+.toggle-search .search-cancel.active .toggle-icon-cancel{
+    opacity: 1;
+    pointer-events: auto;
+}
+   /* search1600px */
+.toggle-search .search1600px{
+position: absolute;
+width: 300px;
+height: 2rem;
+top: 75px;
+right: 4px;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity:0;
+transition: all 0.4s ease;
+}
+.toggle-search .search1600px input{
+    width: 90%;
+    height: 100%;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius:5px 0px 0px 5px;
+}
+.toggle-search .search1600px .search1600px-icon{
+   width: 10%;
+   height: 100%;
+   background-color: white;
+   display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1.3rem;
+position: relative;
+border-radius: 0px 5px 5px 0px;
+}
+.search1600px.active{
+    opacity: 1;
+}
+.search1600px::before{
+content:"";
+background-color: #FFFFFF;
+height:10px;
+width: 10px;
+position: absolute;
+top: -5px;
+transform: rotate(45deg);
+z-index: -1;
+right: 10px;
+
+}
+/* burger */
+.burger-div{
+    visibility: hidden;
+}
+.burger-div .burger-icon{
+font-size: 2rem;
+color: black;
+cursor: pointer;
+}
+@media (max-width:1780px){
+   .search{
+    display: none;
+   }
+   .toggle-search{
+    visibility: visible;
+   }
+}
+@media (max-width:910px) {
+    .burger-div{
+        visibility: visible;
+    }
+    .logo2{
+       visibility: visible;
+    }
+    .menu2{
+        display: none;
+    }
+    .menu{
+        transform: translateX(-100%);
+        transition: all 0.4s ease;
+    }
+    .menu.active{
+        transform: translateX(0);
+    }
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 50%;
+        height:100%;
+        
+        z-index: 3;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu ul li {
+        margin: 1rem 0;
+    }
+    .menu .logo2 a{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin:1rem 0 3rem 0;
+    }
+    .menu .logo2 .logo2-icon{
+        color: white;
+        font-size: 3rem;
+    }
+    .menu .logo2  span{
+        color: white;
+        font-size: 2rem;
+    }
+    .menu2{
+        display:block;
+        position: fixed;
+        z-index: 4;
+        display: flex;
+        bottom: 3rem;
+        align-items: center;
+        width: 100%;
+    }
+    .menu2 li a{
+        color: white;
+        text-decoration: none;
+     }
+     .menu2 li{
+        margin: 0 1rem;
+     }
+}
+
+/* section1 */
+.section1{
+    display: flex;
+    padding:50px;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+section .moon .moon-prayer{
+    font-size: 10rem;
+    color: var(--color10);
+    position: absolute;
+    top: 2rem;
+    right:5rem;
+    
+}
+section .star .star-prayer{
+font-size: 2rem;
+color: #F9E085;
+position: absolute;
+right: 5rem;
+top: 2rem;
+
+}
+section .musilm-prayer{
+    position: absolute;
+    right: 12rem;
+    top: 10rem;
+    transform: translateY(-200%);
+transition: all 4s ease;
+}
+section .slide{
+width: 30%;
+height: 70%;
+border-radius: 10px;
+box-shadow: 15px 20px 40px 10px  rgba(0, 0, 0, 0.2);
+filter: blur(2px);
+z-index: -1;
+}
+section .slide p{
+z-index: 1;
+}
+.prayer-teling .cloud{
+    font-size: 10rem;
+}
+/* section1 time-adan */
+.section1 .time-adan{
+    width:50%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 20px 40px 10px  rgba(0, 0, 0, 0.2);
+}
+.section1 .time-adan{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+}
+.section1 .time-adan span{
+   color: gray;
+}
+.time-adan .content .body-content{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+@media (max-width:1370px) {
+    .section1{
+        flex-direction: column;
+    }
+}
