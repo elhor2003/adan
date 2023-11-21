@@ -11,45 +11,35 @@
     <title>Adan</title>
 </head>
 <body>
-    <nav class="nav">
-        <div class="burger-div">
+    <nav>
+        <!-- <div class="burger-div">
             <iconify-icon icon="iconamoon:menu-burger-horizontal-bold" class="burger-icon"></iconify-icon>
-        </div>
+        </div> -->
         <div class="logo">
             <a href=""><iconify-icon icon="fluent:building-mosque-16-filled" class="logo-icon"></iconify-icon>
                 <span>المستقيم</span></a>
         </div>
-        <div class="menu">
-            <ul>
-                <div class="logo2">
+        <ul class="menu">
+                <!-- <div class="logo2">
                     <a href=""><iconify-icon icon="fluent:building-mosque-16-filled" class="logo2-icon"></iconify-icon>
                         <span>المستقيم</span></a>
-                </div>
+                </div> -->
                 <li><a href="">مواقيت الصلات</a></li>
                 <li><a href="">تقافة</a></li>
                 <li><a href="">الاذكار</a></li>
                 <li><a href="">الرسول(ص)</a></li>
-            </ul>
-        </div>
-        
-        <div class="search">
-            <input type="text" placeholder="ابحت" dir="rtl">
-            <div class="div-icon-search">
-                <iconify-icon icon="ic:baseline-search" class="icon-search"></iconify-icon>
-            </div>
-        </div>
-        <div class="toggle-search">
-            <div class="search-cancel">
-            <iconify-icon icon="ic:baseline-search" class="toggle-icon-search"></iconify-icon>
-            <iconify-icon icon="mdi:cancel-bold" class="toggle-icon-cancel"></iconify-icon>
-            </div>
-            <div class="search1600px">
-                <input type="text" placeholder="ابحت" dir="rtl">
-                <iconify-icon icon="ic:baseline-search" class="search1600px-icon"></iconify-icon>
-            </div>
-        </div>
-        
+        </ul>
         <ul class="menu2">
+            <li><div class="toggle-search">
+                <div class="search-cancel">
+                <iconify-icon icon="ic:baseline-search" class="toggle-icon-search"></iconify-icon>
+                <iconify-icon icon="mdi:cancel-bold" class="toggle-icon-cancel"></iconify-icon>
+                </div>
+                <div class="search1600px">
+                    <input type="text" placeholder="ابحت" dir="rtl">
+                    <iconify-icon icon="ic:baseline-search" class="search1600px-icon"></iconify-icon>
+                </div>
+            </div></li>
             <li class="login"><a href="">
                 <iconify-icon icon="material-symbols:login" class="login-icon"></iconify-icon>
                 <span>
@@ -70,36 +60,42 @@
             </a></li>
 
         </ul>
-        <div class="light-dark">
-        </div>
+        <!-- <div class="light-dark">
+        </div> -->
     </nav>
     <!-- seaction1 -->
     <section class="section1">
-        <div class="time-adan">
-            <div class="img">
-                <img src="./imgs/timer.png" alt="">
-            </div>
-            <div class="content">
-                <div class="title-content"><h1>الدولة: <span>المغرب,الدارالبيضاء</span></h1></div>
-                <div class="body-content">
-                    <h1 dir="rtl">التوقيت الان: <span>17:28</span></h1>
-                <h1 dir="rtl">الصلاة القادمة: <span>المغرب</span> <span>19:30</span></h1>
-                <h3 dir="rtl">قال صلى الله عليه وسلم: <span>"إذا أُقيمت الصلاة فلا تأتوها وأنتم تسعَون، وأتوها وأنتم تمشون، وعليكم السكينة، فما أدركتم فصلّوا، وما فاتكم فأتموا</span></h3>
+        <h1>مواقيت الصلات</h1>
+        <div class="content">
+            <div class="time_of_prayer">
+                <div class="serch-section1">
+                    <input type="text" name="" placeholder="city">
+                </div>
+                <div class="prayers_of_day">
+                    <div class="prayer">
+                        <h1>casablanca</h1>
+                        <ul>
+                            <li class="prayer "><span>sob7:</span><span>1</span></li>
+                            <li class="prayer "><span>fajr:</span><span>1</span></li>
+                            <li class="prayer "><span>dohr:</span><span>1</span></li>
+                            <li class="prayer "><span>3asr:</span><span>1</span></li>
+                            <li class="prayer "><span>maghrib:</span><span>1</span></li>
+                            <li class="prayer "><span>ichaa:</span><span>1</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="photo-muslim">
-            <div class="moon">
-                <iconify-icon icon="clarity:moon-solid" class="moon-prayer"></iconify-icon>
-            </div>
-            <div class="star">
-                <iconify-icon icon="material-symbols-light:star" class="star-prayer"></iconify-icon>
-            </div>
-            <div class="musilm-prayer">
-                <img src="./imgs/muslim_prayer.png" alt="" srcset="">
+            <div class="animation">
+                <img src="./imgs/muslim4.png" alt="">
             </div>
         </div>
     </section>
+    <!-- <section class="section2">
+        <h1>الرسول(ص)</h1>
+        <div class="story">
+            
+        </div>
+    </section> -->
     <script src="index.js"></script>
 </body>
 </html>

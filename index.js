@@ -22,3 +22,6 @@ burger_div.addEventListener("click",()=>{
 window.onload=function(){
     document.querySelector(".musilm-prayer").style.transform="translateY(-0%)"
 }
+// popap
+const prayer=document.querySelectorAll(".prayer")
+console.log(prayer)

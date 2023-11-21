@@ -4,51 +4,52 @@ margin: 0;
 box-sizing: border-box;
 }
 :root{
-    /* 3colors */
-    --color1:#9A3907;
-    --color2:black;
-    /* 3colors */
-    --color3:#561E0B;
-    --color4:#913311;
-    --color5:#2B0203;
-    /* 3colors */
-    --color6:#C1550D;
-    --color7:#651107;
-    --color8:#DA640D;
-    /* 2colors */
-    --color9:#B03F18;
-    --color10:#FB9B12;
-    --color11:#150101;
-    /* brian-color */
-    --color12:#F9E085;
-    --nav:#131921;
+   --color_principale:rgb(11, 64, 64);
+}
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 body{
-    height:auto;
-    width: 100vw;
-    background: linear-gradient(10deg,var(--color2),var(--color1),var(--color10));
+    height:100vh;
+    /* background: linear-gradient(10deg,var(--color2),var(--color1),var(--color10)); */
     font-family: 'Noto Kufi Arabic', sans-serif;
+    background-color:var(--color_principale);
+    
 }
 nav{
-    width: 100%;
-    height: 11vh;
+    max-width:1250px;
+    margin:0 auto;
+    padding: 1rem 2rem;
     background: transparent;
     box-shadow: 15px 20px 40px 10px  rgba(0, 0, 0, 0.2);
     display:flex;
     justify-content: space-between;
+    gap:1rem;
     align-items: center;
-    padding-left:20px;
 }
-.menu ul{
+.menu{
     display: flex;
     font-size: 1.2rem;
     flex-direction: row-reverse;
     list-style-type:none;
 }
-.menu ul li{
+nav .logo span{
+-webkit-text-fill-color:transparent;
+-webkit-text-stroke:1px white;
+font-size: 1.4rem;
+}
+ul li{
     margin:0 1.5rem;
 }
-.menu ul li a{
+.menu li a{
     text-decoration: none;
     color: white;
     position: relative;
@@ -61,17 +62,15 @@ nav{
 }
 a::before{
     content:"";
-    height:10px;
-    width: 10px;
+    height:2px;
+    width: 0;
     position:absolute;
-    border-radius:50%;
     background-color: white;
     top:35px;
-    opacity:0;
     transition:all 0.5s ease;
 }
 .menu li:hover a::before{
-    opacity:1;
+    width:100%;
 }
 a{
     text-decoration: none;
@@ -142,9 +141,9 @@ a{
     position:absolute;
     top:25px;
     opacity:0;
-    transition:all 0.5s ease;
+    transition:all 0.3s ease;
     font-size:1rem;
-    
+    color: white;
 }
 .login a{
     position: relative;
@@ -252,152 +251,117 @@ font-size: 2rem;
 color: black;
 cursor: pointer;
 }
-@media (max-width:1780px){
-   .search{
-    display: none;
-   }
-   .toggle-search{
-    visibility: visible;
-   }
-}
-@media (max-width:910px) {
-    .burger-div{
-        visibility: visible;
-    }
-    .logo2{
-       visibility: visible;
-    }
-    .menu2{
-        display: none;
-    }
-    .menu{
-        transform: translateX(-100%);
-        transition: all 0.4s ease;
-    }
-    .menu.active{
-        transform: translateX(0);
-    }
-    .menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: black;
-        width: 50%;
-        height:100%;
-        
-        z-index: 3;
-    }
-    .menu ul{
-        flex-direction: column;
-    }
-    .menu ul li {
-        margin: 1rem 0;
-    }
-    .menu .logo2 a{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin:1rem 0 3rem 0;
-    }
-    .menu .logo2 .logo2-icon{
-        color: white;
-        font-size: 3rem;
-    }
-    .menu .logo2  span{
-        color: white;
-        font-size: 2rem;
-    }
-    .menu2{
-        display:block;
-        position: fixed;
-        z-index: 4;
-        display: flex;
-        bottom: 3rem;
-        align-items: center;
-        width: 100%;
-    }
-    .menu2 li a{
-        color: white;
-        text-decoration: none;
-     }
-     .menu2 li{
-        margin: 0 1rem;
-     }
-}
-
-/* section1 */
 .section1{
-    display: flex;
-    padding:50px;
+    max-width:1200px;
+    margin:1rem auto;
+    padding: 1rem 2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    margin:auto;
     width: 100%;
-    height: 90vh;
-    position: relative;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
-
-
-section .moon .moon-prayer{
-    font-size: 10rem;
-    color: var(--color10);
-    position: absolute;
-    top: 2rem;
-    right:5rem;
-    
-}
-section .star .star-prayer{
-font-size: 2rem;
-color: #F9E085;
-position: absolute;
-right: 5rem;
-top: 2rem;
-
-}
-section .musilm-prayer{
-    position: absolute;
-    right: 12rem;
-    top: 10rem;
-    transform: translateY(-200%);
-transition: all 4s ease;
-}
-section .slide{
-width: 30%;
-height: 70%;
+.section1 .time_of_prayer{
+padding:0.5rem 1rem;
+margin:0 auto;
+text-align: center;
+width: 100%;
 border-radius: 10px;
-box-shadow: 15px 20px 40px 10px  rgba(0, 0, 0, 0.2);
-filter: blur(2px);
-z-index: -1;
 }
-section .slide p{
-z-index: 1;
+
+.time_of_prayer .serch-section1{
+    margin: 0 auto;
+    max-width:300px;
+    color: white;
 }
-.prayer-teling .cloud{
-    font-size: 10rem;
+.time_of_prayer .serch-section1 input{
+    background-color: transparent;
+    padding:0.5rem 1rem;
+    border-radius:8px;
+    font-size: 1.4rem;
+    outline: none;
+    width: 100%;
+
 }
-/* section1 time-adan */
-.section1 .time-adan{
-    width:50%;
-    height: 100%;
-    border-radius: 20px;
-    box-shadow: 15px 20px 40px 10px  rgba(0, 0, 0, 0.2);
+.prayer h1{
+text-transform: uppercase;
 }
-.section1 .time-adan{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: white;
+.prayer{
+    text-align: center;
+    width: 100%;
 }
-.section1 .time-adan span{
-   color: gray;
-}
-.time-adan .content .body-content{
-    height: 90%;
+.prayer ul{
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap:0.5rem;
+    list-style-type: none;
+align-items: center;
+width:100%;
 }
-@media (max-width:1370px) {
-    .section1{
-        flex-direction: column;
+.prayer ul li {
+    color: white;
+    font-weight: 600;
+    background-color: white;
+    padding: 8px;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 15px 20px 40px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    transition:all 1s ease-in-out;
+
+}
+.content .animation{
+    margin: auto;
+}
+.content .animation img{
+animation: updown 1.6s infinite ease-in-out;
+}
+@media (width<1117px) {
+    .menu2 .login{
+        display: none;
     }
+}
+@media (width<828px) {
+    .menu{
+        display: none;
+    }
+    .content{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .animation{
+        grid-area: 1/1/2/2;
+    }
+    
+}
+@media (width<525px) {
+    .prayer ul li{
+        max-width:300px;
+    }
+}
+.section2{
+    max-width: 1200px;
+    margin:1rem auto;
+    text-align: center;
+}
+.section2 .story{
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    transition: all 1s ease-in-out;
+    box-shadow: 15px 20px 40px 10px  rgba(0, 0, 0, 0.2);
+}
+.section2 .story:hover{
+    transform:rotateY(13deg)
 }
