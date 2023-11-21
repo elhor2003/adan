@@ -21,7 +21,7 @@ body{
     height:100vh;
     /* background: linear-gradient(10deg,var(--color2),var(--color1),var(--color10)); */
     font-family: 'Noto Kufi Arabic', sans-serif;
-    background-color:var(--color_principale);
+    background:linear-gradient(45deg,cyan,white);
     
 }
 nav{
